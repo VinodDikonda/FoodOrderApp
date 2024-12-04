@@ -1,0 +1,13 @@
+<div class="container">
+    <h2>Select Month to View Food Report</h2>
+  
+    <mat-form-field appearance="outline">
+      <mat-label>Select Month</mat-label>
+      <input matInput [matDatepicker]="picker" (dateChange)="onMonthSelect($event)">
+      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker startView="multi-year" (monthSelected)="onMonthSelect($event)" panelClass="month-picker"></mat-datepicker>
+    </mat-form-field>
+  
+    <button mat-raised-button color="primary" (click)="viewReport()">View Report</button>
+  </div>
+  
